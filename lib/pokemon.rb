@@ -14,7 +14,7 @@ attr_accessor :id, :name, :type, :db, :hp
 
   def self.save(name, type, db)
    db.execute("INSERT INTO pokemon(name, type) VALUES(?, ?)", name, type)
- end
+  end
 
   def self.find(id_number, db)
     pokemon_find = db.execute("SELECT * FROM pokemon WHERE id=?", id_number).first
