@@ -22,7 +22,7 @@ attr_accessor :id, :name, :type, :db, :hp
   end
 
   def alter_hp(health, db)
-    db.execute("UPDATE pokemon SET hp=? WHERE id=?", health, @id).flatten
+    db.execute("UPDATE pokemon SET hp=? WHERE id=?", health, @id)
   end
 
 end #ends class
